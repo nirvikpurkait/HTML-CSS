@@ -63,6 +63,7 @@ nav {
 	flex-grow: 1;
 	transform: unset;
 	z-index: unset;
+	background: var(--white);
 }
 
 @media screen and (max-width: 768px) {
@@ -71,7 +72,7 @@ nav {
 		top: 100%;
 		left: 0;
 		width: 100%;
-		transform: translateY(-100%);
+		transform: translateY(-120%);
 		height: max-content;
 		transition: all 300ms linear;
 		z-index: -1;
@@ -90,7 +91,6 @@ nav {
 	flex-basis: 100%;
 	max-width: 80rem;
 	justify-content: space-between;
-	background: var(--white);
 }
 
 @media screen and (max-width: 768px) {
@@ -104,15 +104,12 @@ nav {
 	list-style: none;
 	font-size: 2rem;
 	font-weight: 700;
-	padding-left: 2rem;
+	padding-left: 3rem;
 
 	--navitem-hover-bg: #4c9e9e;
 }
 
 .nav-item:hover {
-	background: var(--navitem-hover-bg);
-	background: var(--navitem-hover-bg);
-
 	background: var(--navitem-hover-bg);
 }
 
