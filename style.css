@@ -2,6 +2,9 @@
 	font-size: 62.5%;
 
 	--white: #fff;
+	--pink: #ff66cc;
+	--yellow: #ffcc66;
+	--image-text-bg: #f16e84b3;
 }
 
 *,
@@ -26,6 +29,7 @@ nav {
 	align-items: center;
 	background: var(--white);
 	padding: var(--nav-padding);
+  z-index: 9999;
 }
 
 .hamburger label {
@@ -94,15 +98,17 @@ nav {
 .nav-item {
 	list-style: none;
 	font-size: 2rem;
-  font-weight: 700;
-  padding-left: 2rem;
+	font-weight: 700;
+	padding-left: 2rem;
 
-  --navitem-hover-bg: #4c9e9e;
+	--navitem-hover-bg: #4c9e9e;
 }
 
 .nav-item:hover {
-  background: var(--navitem-hover-bg);
+	background: var(--navitem-hover-bg);
+	background: var(--navitem-hover-bg);
 
+	background: var(--navitem-hover-bg);
 }
 
 .contact {
@@ -115,4 +121,74 @@ nav {
 
 .contact img {
 	width: 100%;
+}
+
+/* content */
+
+.content {
+	background-image: linear-gradient(to left, var(--pink), var(--yellow));
+
+	height: max-content;
+	padding-bottom: 30rem;
+}
+
+.section-1 {
+	height: max-content;
+	position: relative;
+}
+
+.section-1-bg {
+  min-height: 25rem;
+	width: 100%;
+}
+
+.section-1-text {
+	position: absolute;
+	top: 8rem;
+	left: 6rem;
+	width: 70vw;
+	max-width: 70rem;
+	color: var(--white);
+	z-index: 1;
+	font-family: sans-serif;
+	padding: 4rem 5rem 4rem 4rem;
+}
+
+@media screen and (min-width:779px) {
+  .section-1-text{
+    top: 20rem;
+    max-width: 50vw;
+  }
+}
+
+.section-1-text::before {
+	content: "";
+	position: absolute;
+	background: var(--image-text-bg);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.section-1-heading {
+	font-size: 4rem;
+	font-weight: 700;
+}
+
+@media screen and (max-width:780px) {
+  .section-1-heading{
+    font-size: 3rem;
+  }
+}
+
+.section-1-paragraph {
+	font-size: 1.6rem;
+}
+
+@media screen and (max-width:780px) {
+  .section-1-paragraph{
+    font-size: 1.34rem;
+  }
 }
