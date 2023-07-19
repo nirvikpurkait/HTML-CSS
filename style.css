@@ -15,9 +15,9 @@
 	box-sizing: border-box;
 }
 
-html{
-  height: max-content;
-  /* overflow: hidden; */
+html {
+	height: max-content;
+	/* overflow: hidden; */
 }
 
 body {
@@ -60,6 +60,7 @@ nav {
 .nav-menu {
 	position: relative;
 	display: flex;
+	justify-content: space-evenly;
 	flex-grow: 1;
 	transform: unset;
 	z-index: unset;
@@ -93,7 +94,7 @@ nav {
 	justify-content: space-between;
 }
 
-@media screen and (max-width:1040px) {
+@media screen and (max-width: 1040px) {
 	.nav-list {
 		flex-direction: column;
 		padding: var(--nav-padding);
@@ -103,14 +104,15 @@ nav {
 .nav-item {
 	list-style: none;
 	font-size: 2rem;
-	font-weight: 700;
 	padding-left: 3rem;
 
 	--navitem-hover-bg: #4c9e9e;
 }
 
-.nav-item:hover {
-	background: var(--navitem-hover-bg);
+@media screen and (max-width: 1040px) {
+	.nav-item:hover {
+		background: var(--navitem-hover-bg);
+	}
 }
 
 .contact {
@@ -244,16 +246,16 @@ nav {
 	margin-bottom: 2rem;
 }
 
-.card-details{
+.card-details {
 	text-align: center;
 }
 
 .order-btn {
 	padding: 1.5rem 5rem;
 	font-size: 2.5rem;
-  font-weight: 700;
+	font-weight: 700;
 	display: flex;
-	margin: 15rem auto 0 ;
+	margin: 15rem auto 0;
 	border: none;
 	outline: none;
 	border-radius: 20rem;
