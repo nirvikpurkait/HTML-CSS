@@ -4,7 +4,7 @@
 	--white: #fff;
 	--pink: #ff66cc;
 	--yellow: #ffcc66;
-	--image-text-bg: #f16e84b3;
+	--image-text-bg: #f16e8486;
 }
 
 *,
@@ -17,7 +17,6 @@
 
 html {
 	height: max-content;
-	/* overflow: hidden; */
 }
 
 body {
@@ -73,15 +72,13 @@ nav {
 		top: 100%;
 		left: 0;
 		width: 100%;
-		transform: translateY(-120%);
+		display: none;
 		height: max-content;
 		transition: all 300ms linear;
-		z-index: -1;
 	}
 
 	nav:has(input:checked) .nav-menu {
-		z-index: 1;
-		transform: translateY(0);
+		display: block;
 	}
 }
 
@@ -156,6 +153,12 @@ nav {
 	z-index: 1;
 	font-family: sans-serif;
 	padding: 5rem 6rem 6rem 5rem;
+}
+
+@media screen and (max-width: 520px) {
+	.section-1-text {
+		top: 4rem;
+	}
 }
 
 @media screen and (min-width: 1019px) {
@@ -233,10 +236,12 @@ nav {
 	border-radius: 0rem 5rem 0rem 5rem;
 }
 
-.card img {
+.image {
 	width: 100%;
-	height: 15rem;
-	object-fit: cover;
+	height: 20rem;
+}
+
+.image img {
 	border-radius: 0rem 3rem 0rem 0rem;
 }
 
